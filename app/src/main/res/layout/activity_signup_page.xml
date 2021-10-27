@@ -4,6 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".SignupPage">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:gravity="center"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:inputType="textPersonName"
+                android:padding="3dip"
+                android:text="name" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:inputType="textEmailAddress"
+                android:padding="3dip"
+                android:text="email" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:inputType="textPostalAddress"
+                android:padding="3dip"
+                android:text="Postal Address" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:inputType="phone"
+                android:padding="3dip"
+                android:text="Phone" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:inputType="textPassword"
+                android:padding="3dip"
+                android:text="Password" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
 
 </LinearLayout>
