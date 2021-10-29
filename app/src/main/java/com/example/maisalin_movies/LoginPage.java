@@ -75,6 +75,12 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
             startActivity(intent);
         }
     }
+    public void signup(View view){
+        Intent intent = new Intent(this, SignupPage.class);
+        startActivity(intent);
+
+
+    }
 
 
     //clears the email and the password input on long click by user

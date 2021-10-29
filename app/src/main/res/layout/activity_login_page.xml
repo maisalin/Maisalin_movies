@@ -155,7 +155,8 @@
                         android:layout_width="18.7dp"
                         android:layout_height="15.3dp"
                         android:clickable="true"
-                        android:src="@drawable/black_arrow" />
+                        android:src="@drawable/black_arrow"
+                        android:onClick="login"/>
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
@@ -170,9 +171,9 @@
         android:layout_marginRight="44.3dp"
         android:fontFamily="@font/poppins_regular"
         android:text="don't have an account?"
-        android:textColor="#c2c2c2"
-        android:textSize="25dp"
-        android:onClick=""
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:onClick="signup"
 
         />
 
