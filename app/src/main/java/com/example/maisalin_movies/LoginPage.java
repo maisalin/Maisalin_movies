@@ -78,8 +78,6 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
     public void signup(View view){
         Intent intent = new Intent(this, SignupPage.class);
         startActivity(intent);
-
-
     }
 
 
