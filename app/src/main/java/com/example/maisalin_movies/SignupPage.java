@@ -3,7 +3,10 @@ package com.example.maisalin_movies;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,13 +21,16 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SignupPage extends AppCompatActivity implements View.OnLongClickListener {
+import java.util.Calendar;
+
+public class SignupPage extends AppCompatActivity implements View.OnClickListener {
 
 
     private static final String TAG = "FIREBASE";
     //declaring all the components
     private EditText editTextName, editTextPass;
     private Button button;
+    private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private FirebaseAuth mAuth;
 
     @Override
@@ -63,8 +69,19 @@ public class SignupPage extends AppCompatActivity implements View.OnLongClickLis
                 });
     }
 
+
     @Override
-    public boolean onLongClick(View view) {
-        return false;
+    public void onClick(View view) {
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        DatePickerDialog dialog = new DatePickerDialog(SignupPage.this,
+                android.R.style.Theme_Holo_Dialog_MinWidth,
+                mOnDateSetListener,
+                year, month, day);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 }

@@ -18,11 +18,11 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="660dp">
+            android:layout_height="680dp">
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="660dp"
+                android:layout_height="635dp"
                 android:background="@drawable/white_cueve_bg" />
 
             <LinearLayout
@@ -85,7 +85,7 @@
                     android:textSize="13.3sp" />
 
                 <EditText
-                    android:id="@+id/editTextName"
+                    android:id="@+id/editTextEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -183,7 +183,7 @@
                         android:layout_width="18.7dp"
                         android:layout_height="15.3dp"
                         android:clickable="true"
-                        android:onClick=""
+                        android:onClick="submit"
                         android:src="@drawable/black_arrow" />
                 </LinearLayout>
             </LinearLayout>
