@@ -20,11 +20,12 @@ public class MusicService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mediaplayer= MediaPlayer.create(this,R.raw.backgroundmusic);
+        // mediaplayer= MediaPlayer.create(this,R.raw.backgroundmusic);
         mediaplayer.setLooping(true);
         mediaplayer.setVolume(100,100);
 
     }
+
     //when the service is started
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
