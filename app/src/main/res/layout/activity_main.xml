@@ -9,7 +9,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:padding="30dp"
@@ -23,8 +23,7 @@
                 android:gravity="center"
                 android:text="Welcome to Netfilm"
                 android:textSize="26dp"
-                android:textStyle="italic"
-                />
+                android:textStyle="italic" />
 
 
             <RelativeLayout
@@ -39,10 +38,26 @@
                     android:layout_marginLeft="55dp"
                     android:hint="Search"
                     android:inputType="text"
-                    android:textSize="18dp"
-                    />
+                    android:textSize="18dp" />
 
             </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/popularCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="Popular"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 
@@ -60,6 +75,7 @@
                     android:layout_width="350dp"
                     android:layout_height="250dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
                     android:id="@+id/popular1">
                     <ImageView
                         android:layout_width="match_parent"
@@ -77,6 +93,7 @@
                     app:cardCornerRadius="20dp"
                     android:layout_height="250dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
                     android:id="@+id/popular2">
 
                     <ImageView
@@ -95,6 +112,7 @@
                     android:id="@+id/popular3"
                     android:layout_height="250dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
                     >
 
                     <ImageView
@@ -141,7 +159,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/movie01"
@@ -159,7 +177,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     app:cardCornerRadius="20dp"
@@ -179,7 +197,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/movie03"
@@ -196,7 +214,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/movie04"
@@ -245,7 +263,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/toyboy">
@@ -262,7 +280,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/you"
                     android:layout_width="150dp"
-                    android:layout_height="224dp"
+                    android:layout_height="240dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     app:cardCornerRadius="20dp">
@@ -278,7 +296,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/elite">
@@ -295,7 +313,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/theSociety"
@@ -314,7 +332,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/lost"
@@ -332,7 +350,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/laCasa"
@@ -349,7 +367,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/reasonsWhy"
@@ -398,7 +416,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv21"
@@ -416,7 +434,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv22">
@@ -434,7 +452,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv23"
@@ -451,7 +469,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv24"
@@ -468,7 +486,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv25"
@@ -485,7 +503,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv26"
@@ -532,7 +550,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom1">
@@ -550,7 +568,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom2">
@@ -568,7 +586,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom3">
@@ -584,7 +602,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom4">
@@ -600,7 +618,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom5">
@@ -616,7 +634,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="240dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom6">
