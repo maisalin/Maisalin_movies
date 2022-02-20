@@ -59,7 +59,6 @@
                     app:cardCornerRadius="20dp"
                     android:layout_width="350dp"
                     android:layout_height="250dp"
-                    android:textAlignment="center"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/popular1">
                     <ImageView
@@ -67,7 +66,8 @@
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/movie4"/>
+                        android:src="@drawable/movie4"
+                        android:onClick="divergent"/>
 
 
                 </androidx.cardview.widget.CardView>
@@ -141,30 +141,30 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/movie01"
                     >
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/movie7"/>
+                        android:src="@drawable/movie7" />
 
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/movie02"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
-                    android:textAlignment="center"
-                    app:cardCornerRadius="20dp">
+                    app:cardCornerRadius="20dp"
+                    android:id="@+id/movie02">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -179,8 +179,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/movie03"
@@ -197,8 +196,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/movie04"
@@ -247,8 +245,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/toyboy">
@@ -261,28 +258,27 @@
                         android:src="@drawable/tv16"/>
 
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="20dp"
+                    android:id="@+id/you"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="224dp"
                     android:layout_marginLeft="10dp"
-                    android:id="@+id/you">
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20dp">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/tv10"/>
+                        android:src="@drawable/tv10" />
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/elite">
@@ -299,8 +295,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/theSociety"
@@ -319,8 +314,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/lost"
@@ -338,8 +332,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/laCasa"
@@ -356,8 +349,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/reasonsWhy"
@@ -406,8 +398,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv21"
@@ -425,8 +416,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv22">
@@ -444,8 +434,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv23"
@@ -462,8 +451,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv24"
@@ -480,8 +468,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv25"
@@ -498,8 +485,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="150dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/tv26"
@@ -546,8 +532,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom1">
@@ -565,8 +550,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom2">
@@ -584,8 +568,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom3">
@@ -601,8 +584,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom4">
@@ -618,8 +600,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom5">
@@ -635,8 +616,7 @@
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="20dp"
                     android:layout_width="150dp"
-                    android:layout_height="200dp"
-                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:id="@+id/romcom6">
@@ -649,11 +629,7 @@
 
 
                 </androidx.cardview.widget.CardView>
-
             </LinearLayout>
-
         </HorizontalScrollView>
-
     </LinearLayout>
-
 </ScrollView>
