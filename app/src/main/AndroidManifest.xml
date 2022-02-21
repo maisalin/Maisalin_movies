@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Maisalin_movies">
         <activity
+            android:name=".DetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".Divergent"
             android:exported="true" />
 
@@ -42,6 +45,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".NotificationReceiver"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>
