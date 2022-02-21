@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -36,27 +37,43 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         startService(musicIntent);
 
 
-        popularCard =findViewById(R.id.popular1);
-        popularCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i= new Intent(MainActivity.this,DetailActivity.class);
-                i.putExtra("name","Divergent");
-                startActivity(i);
-            }
-        });
+        //popularCard =findViewById(R.id.popular1);
+        //popularCard.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+           // public void onClick(View view) {
+              //  Intent i= new Intent(MainActivity.this,DetailActivity.class);
+           //     i.putExtra("name","Divergent");
+             //   startActivity(i);
+       //     }
+      //  });
 
     }
 
     public void divergent(View view){
         Intent intent = new Intent(this, Divergent.class);
-        //put extra()
         startActivity(intent);
     }
 
 
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
+        if(i == dialogInterface.BUTTON_POSITIVE){
+            super.onBackPressed();
+            dialogInterface.cancel();
+        }
+        if(i==dialogInterface.BUTTON_NEGATIVE){
+            dialogInterface.cancel();
+        }
+    }
 
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure?");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes", this);
+        builder.setNegativeButton("No", this);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

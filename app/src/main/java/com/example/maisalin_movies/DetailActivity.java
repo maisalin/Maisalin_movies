@@ -29,7 +29,11 @@ public class DetailActivity extends AppCompatActivity {
 
     public void loadContentByName(String name){
         if(name.equals("Divergent")){
-
+            fileHandler = new FileHandler("Divergent", this);
+            fileHandler.readFile();
+        }else if(name.equals("")){
+            fileHandler = new FileHandler("", this);
+            fileHandler.readFile();
         }
     }
 }
