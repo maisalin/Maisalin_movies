@@ -37,15 +37,15 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         startService(musicIntent);
 
 
-        //popularCard =findViewById(R.id.popular1);
-        //popularCard.setOnClickListener(new View.OnClickListener() {
-         //   @Override
-           // public void onClick(View view) {
-              //  Intent i= new Intent(MainActivity.this,DetailActivity.class);
-           //     i.putExtra("name","Divergent");
-             //   startActivity(i);
-       //     }
-      //  });
+        popularCard =findViewById(R.id.popular1);
+        popularCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(MainActivity.this,DetailActivity.class);
+                i.putExtra("name","Divergent");
+                startActivity(i);
+            }
+        });
 
     }
 
