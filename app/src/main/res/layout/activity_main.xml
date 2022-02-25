@@ -82,8 +82,7 @@
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/movie4"
-                        android:onClick="divergent"/>
+                        android:src="@drawable/movie4" />
 
 
                 </androidx.cardview.widget.CardView>

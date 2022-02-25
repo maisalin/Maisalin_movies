@@ -170,10 +170,11 @@
         android:layout_marginTop="17.3dp"
         android:layout_marginRight="44.3dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="don't have an account?"
-        android:textColor="@color/black"
+        android:text="don't have an account? click here"
+        android:textColor="@color/white"
         android:textSize="20dp"
         android:onClick="signup"
+
 
         />
 

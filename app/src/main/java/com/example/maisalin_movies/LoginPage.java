@@ -53,7 +53,7 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
         }
 
     }
-    public void login(View view) {
+    public void loginnn(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         if (!editTextName.getText().toString().equals("")) {
             //saving email and password of user in local file for future use
@@ -99,6 +99,8 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent i = new Intent(LoginPage.this,MainActivity.class);
+                            startActivity(i);
 
                         } else {
                             // If sign in fails, display a message to the user.

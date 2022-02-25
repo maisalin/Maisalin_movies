@@ -20,12 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="680dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="635dp"
-                android:background="@drawable/white_cueve_bg" />
 
             <LinearLayout
+                android:background="@color/white"
                 android:id="@+id/linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -158,6 +155,14 @@
                     android:layout_marginTop="6.3dp"
                     android:layout_marginRight="44.3dp"
                     android:background="#d5d5d5" />
+                <LinearLayout
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -167,26 +172,22 @@
                 android:layout_gravity="bottom"
                 android:orientation="horizontal"
                 android:paddingLeft="30dp">
-
-
-
-
-                <LinearLayout
-                    android:layout_width="20dp"
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.4"
-                    android:gravity="right"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:text="submit"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginBottom="98dp"
+                    android:layout_marginLeft="90dp"
+                    android:onClick="submit"
+                    />
 
-                    <ImageView
-                        android:id="@+id/image_button"
-                        android:layout_width="18.7dp"
-                        android:layout_height="15.3dp"
-                        android:clickable="true"
-                        android:onClick="submit"
-                        android:src="@drawable/black_arrow" />
-                </LinearLayout>
             </LinearLayout>
+
+
+
         </FrameLayout>
     </LinearLayout>
 

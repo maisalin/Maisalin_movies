@@ -49,12 +49,6 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
 
     }
 
-    public void divergent(View view){
-        Intent intent = new Intent(this, Divergent.class);
-        startActivity(intent);
-    }
-
-
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if(i == dialogInterface.BUTTON_POSITIVE){
@@ -76,4 +70,9 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+
+
+
+
 }
