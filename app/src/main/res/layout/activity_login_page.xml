@@ -150,13 +150,15 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/image_button"
-                        android:layout_width="18.7dp"
-                        android:layout_height="15.3dp"
-                        android:clickable="true"
-                        android:src="@drawable/black_arrow"
-                        android:onClick="login"/>
+                    <Button
+                        android:id="@+id/editButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/white"
+                        />
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>

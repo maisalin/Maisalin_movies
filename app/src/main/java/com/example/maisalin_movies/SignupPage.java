@@ -29,7 +29,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     private static final String TAG = "FIREBASE";
     //declaring all the components
     private EditText editTextName, editTextPass;
-    private Button button;
+    private Button submit;
     private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private FirebaseAuth mAuth;
 
@@ -38,6 +38,11 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup_page);
         //Returns a reference to the instance of the project Firebase
+
+        editTextName = findViewById(R.id.editTextEmail);
+        editTextPass= findViewById(R.id.editTextPass);
+        submit=findViewById(R.id.editButton);
+
         mAuth = FirebaseAuth.getInstance();
     }
 

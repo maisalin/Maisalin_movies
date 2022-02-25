@@ -19,13 +19,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginPage extends AppCompatActivity implements View.OnLongClickListener {
+public class LoginPage extends AppCompatActivity implements View.OnLongClickListener, View.OnClickListener {
 
 
     private static final String TAG ="FIREBASE" ;
     //declaring all the components
     private EditText editTextName, editTextPass;
-    private ImageView buttonLogin;
+    private Button buttonLogin;
     private FirebaseAuth mAuth;
 
 
@@ -39,9 +39,10 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
         // findViewById returns reference to the object with the specified id
         editTextName = findViewById(R.id.editTextName);
         editTextPass= findViewById(R.id.editTextPass);
-        buttonLogin = findViewById(R.id.image_button);
+        buttonLogin = findViewById(R.id.editButton);
         //sets the required button to response to long click, otherwise it won't
         buttonLogin.setOnLongClickListener(this);
+        buttonLogin.setOnClickListener(this);
 
         SharedPreferences sp = getSharedPreferences("settings",MODE_PRIVATE);
         String email=sp.getString("email","");
@@ -53,28 +54,7 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
         }
 
     }
-    public void loginnn(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
-        if (!editTextName.getText().toString().equals("")) {
-            //saving email and password of user in local file for future use
-            //create sp file
-            SharedPreferences sp = getSharedPreferences("settings", MODE_PRIVATE);
-            //open editor for editing
-            SharedPreferences.Editor editor = sp.edit();
-            //write the wanted settings
-            editor.putString("email", editTextName.getText().toString());
-            editor.putString("password", editTextPass.getText().toString());
 
-            // save and close file
-            editor.commit();
-
-
-           // login(editTextName.getText().toString(), editTextPass.getText().toString());
-
-            intent.putExtra("name", editTextName.getText().toString());
-            startActivity(intent);
-        }
-    }
     public void signup(View view){
         Intent intent = new Intent(this, SignupPage.class);
         startActivity(intent);
@@ -99,7 +79,7 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i = new Intent(LoginPage.this,MainActivity.class);
+                            Intent i = new Intent(LoginPage.this,profileActivity.class);
                             startActivity(i);
 
                         } else {
@@ -112,5 +92,10 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
                         // ...
                     }
                 });
+    }
+
+    @Override
+    public void onClick(View view) {
+        login(editTextName.getText().toString(), editTextPass.getText().toString());
     }
 }
