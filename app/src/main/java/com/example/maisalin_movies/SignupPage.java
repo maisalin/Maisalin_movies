@@ -54,7 +54,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i= new Intent(SignupPage.this,MainActivity.class);
+                            Intent i= new Intent(SignupPage.this,profileActivity.class);
                             startActivity(i);
 
                         } else {
