@@ -38,8 +38,8 @@ public class NotificationIntentService extends IntentService {
     protected void onHandleIntent(Intent intent) {
         Notification.Builder noBuilder=new Notification.Builder(this);
         //todo need to change the notification title
-        noBuilder.setContentTitle("this is the notification title");
-        noBuilder.setContentText("this is the notification body");
+        noBuilder.setContentTitle("NETFILM");
+        noBuilder.setContentText("Hi! welcome to netfilm ;)");
         noBuilder.setSmallIcon(R.drawable.ic_baseline_person_24);
         //this is the notification icon
         Intent noIntent1=new Intent(this,MainActivity.class);
