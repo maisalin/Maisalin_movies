@@ -40,6 +40,8 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
         //Returns a reference to the instance of the project Firebase
         mAuth = FirebaseAuth.getInstance();
 
+        //hide bar
+        getSupportActionBar().hide();
         // findViewById returns reference to the object with the specified id
         editTextName = findViewById(R.id.editTextName);
         editTextPass= findViewById(R.id.editTextPass);

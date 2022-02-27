@@ -49,6 +49,8 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
 
         mAuth = FirebaseAuth.getInstance();
 
+        //hide bar
+        getSupportActionBar().hide();
 
         //hide/show password
         editTextPass.setOnTouchListener(new View.OnTouchListener() {

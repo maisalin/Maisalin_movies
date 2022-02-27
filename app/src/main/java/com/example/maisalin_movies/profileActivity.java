@@ -21,6 +21,7 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
     private static final int CAMERA_REQUEST = 0;
     private static final int GALLERY_REQUEST = 1;
 
+
     //attributes
     private Button buttonCamera, buttonGallery;
     private ImageView imageViewProfile;
@@ -32,6 +33,8 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        //hide bar
+        getSupportActionBar().hide();
 
         //gets reference for the design components
         buttonCamera= findViewById(R.id.buttonCamera);

@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         musicIntent= new Intent(this,MusicService.class);
         startService(musicIntent);
 
+        //hide bar
+        getSupportActionBar().hide();
 
         popularCard =findViewById(R.id.popular1);
         popularCard.setOnClickListener(new View.OnClickListener() {

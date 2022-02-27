@@ -23,6 +23,9 @@ public class ArrayListActivity extends AppCompatActivity{
         setContentView(R.layout.activity_array_list);
         list = new ArrayList<>();
 
+        //hide bar
+        getSupportActionBar().hide();
+
         list.add(new Item("my first item",R.drawable.img,true,50));
         list.add(new Item("idk",R.drawable.img,true,34));
         list.add(new Item("this is supposed to be a string",R.drawable.img,true,74));
