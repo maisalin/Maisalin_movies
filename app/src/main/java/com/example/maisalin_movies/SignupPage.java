@@ -8,7 +8,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,10 +31,11 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
 
     private static final String TAG = "FIREBASE";
     //declaring all the components
-    private EditText editTextName, editTextPass;
+    private EditText editTextEmail, editTextPass;
     private Button submit;
     private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private FirebaseAuth mAuth;
+    boolean passwordVisible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +43,48 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_signup_page);
         //Returns a reference to the instance of the project Firebase
 
-        editTextName = findViewById(R.id.editTextEmail);
+        editTextEmail = findViewById(R.id.editTextEmail);
         editTextPass= findViewById(R.id.editTextPass);
         submit=findViewById(R.id.editButton);
 
         mAuth = FirebaseAuth.getInstance();
+
+
+        //hide/show password
+        editTextPass.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final  int Right=2;
+                if(motionEvent.getAction()== MotionEvent.ACTION_UP){
+                    if(motionEvent.getRawX()>= editTextPass.getRight()-editTextPass.getCompoundDrawables()[Right].getBounds().width()){
+                        int selection= editTextPass.getSelectionEnd();
+                        if(passwordVisible){
+                            //set drawable image here
+                            editTextPass.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_visibility_off_24,0);
+                            //for hide password
+                            editTextPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible=false;
+
+                        }else{
+                            //set drawable image here
+                            editTextPass.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_visibility_24,0);
+                            //for show password
+                            editTextPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible=true;
+                        }
+                        editTextPass.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
     }
 
 
     public void submit(View view){
-        signUp(editTextName.getText().toString(),editTextPass.getText().toString());
+        signUp(editTextEmail.getText().toString(),editTextPass.getText().toString());
     }
     public void signUp(String email, String password){
         mAuth.createUserWithEmailAndPassword(email, password)

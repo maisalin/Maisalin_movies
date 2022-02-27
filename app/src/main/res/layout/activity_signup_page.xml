@@ -142,12 +142,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:background="@android:color/transparent"
-                    android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
                     android:fontFamily="@font/poppins_semibold"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:textCursorDrawable="@drawable/grey_cursor_color"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+                    android:longClickable="false"/>
 
                 <View
                     android:layout_width="wrap_content"

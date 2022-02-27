@@ -27,6 +27,7 @@
 
             <LinearLayout
                 android:id="@+id/linear"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -88,7 +89,8 @@
                     android:maxLines="1"
                     android:textCursorDrawable="@drawable/grey_cursor_color"
                     android:textSize="15sp"
-                    android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"/>
+                    android:longClickable="false"
+                    android:drawableRight="@drawable/ic_baseline_visibility_off_24"/>
 
                 <View
                     android:layout_width="wrap_content"
@@ -153,12 +155,11 @@
                     <Button
                         android:id="@+id/editButton"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
                         android:gravity="center"
                         android:text="Login"
-                        android:textColor="@color/black"
-                        android:backgroundTint="@color/white"
-                        />
+                        android:textColor="@color/black" />
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
@@ -172,7 +173,7 @@
         android:layout_marginTop="17.3dp"
         android:layout_marginRight="44.3dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="don't have an account? click here"
+        android:text="don't have an account?"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:onClick="signup"

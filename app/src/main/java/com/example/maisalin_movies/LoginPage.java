@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,6 +30,7 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
     private EditText editTextName, editTextPass;
     private Button buttonLogin;
     private FirebaseAuth mAuth;
+    boolean passwordVisible;
 
 
     @Override
@@ -52,6 +56,36 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
             editTextName.setText(email);
             editTextPass.setText(password);
         }
+
+        //hide/show password
+        editTextPass.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final  int Right=2;
+                if(motionEvent.getAction()== MotionEvent.ACTION_UP){
+                    if(motionEvent.getRawX()>= editTextPass.getRight()-editTextPass.getCompoundDrawables()[Right].getBounds().width()){
+                        int selection= editTextPass.getSelectionEnd();
+                        if(passwordVisible){
+                            //set drawable image here
+                            editTextPass.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_visibility_off_24,0);
+                            //for hide password
+                            editTextPass.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible=false;
+
+                        }else{
+                            //set drawable image here
+                            editTextPass.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0,R.drawable.ic_baseline_visibility_24,0);
+                            //for show password
+                            editTextPass.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible=true;
+                        }
+                        editTextPass.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
     }
 
