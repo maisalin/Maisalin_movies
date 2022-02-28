@@ -115,7 +115,7 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i = new Intent(LoginPage.this,profileActivity.class);
+                            Intent i = new Intent(LoginPage.this,MainActivity2.class);
                             startActivity(i);
 
                         } else {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#ABB8B9"
+    tools:context=".FirstActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="60dp"
+        android:text="Welcome !"
+        android:textColor="#ffff"
+        android:layout_gravity="center"
+        android:layout_marginTop="90sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textStyle="bold"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="331dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/movie11"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Have Fun"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-light"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+</LinearLayout>
