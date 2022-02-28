@@ -42,6 +42,7 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
 
         //hide bar
         getSupportActionBar().hide();
+
         // findViewById returns reference to the object with the specified id
         editTextName = findViewById(R.id.editTextName);
         editTextPass= findViewById(R.id.editTextPass);

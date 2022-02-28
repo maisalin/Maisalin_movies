@@ -46,6 +46,7 @@ public class FirstActivity extends AppCompatActivity {
         text2.startAnimation(myAnimation2);
 
 
+        //this is related to the notification
         Intent notifyIntent = new Intent(this,NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast
                 (this, NOTIFICATION_REMINDER_NIGHT, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
