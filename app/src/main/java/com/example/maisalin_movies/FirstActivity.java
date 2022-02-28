@@ -14,10 +14,11 @@ import android.widget.TextView;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private TextView text1,text2;
-    private static int Splash_timeout=5000;
+
     private static final int NOTIFICATION_REMINDER_NIGHT = 1;//this is for the broadcast receiver
     private Intent musicIntent;
+    private TextView text1,text2;
+    private static int Splash_timeout=5000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

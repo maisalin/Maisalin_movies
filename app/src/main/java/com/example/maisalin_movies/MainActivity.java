@@ -20,8 +20,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final int NOTIFICATION_REMINDER_NIGHT = 1;//this is for the broadcast receiver
-    private Intent musicIntent;
    // private CardView popular1,popular2 ,popular3, movie01,movie02,movie04;
    // private RelativeLayout tvShowCard, popularCard, moviesCard, tvShows2Card, romComsCard;
    //implements DialogInterface.OnClickListener
@@ -29,17 +27,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent notifyIntent = new Intent(this,NotificationReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast
-                (this, NOTIFICATION_REMINDER_NIGHT, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
-                1000 * 60 * 1, pendingIntent);
-
-
-        //this will start the service which in turn will start the music
-        musicIntent= new Intent(this,MusicService.class);
-        startService(musicIntent);
 
         //hide bar
         getSupportActionBar().hide();
