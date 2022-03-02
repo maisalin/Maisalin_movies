@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:background="#ABB8B9"
     tools:context=".FirstActivity">
 
     <TextView
@@ -15,7 +14,7 @@
         android:layout_height="wrap_content"
         android:textSize="60dp"
         android:text="Welcome !"
-        android:textColor="#ffff"
+        android:textColor="#ababab"
         android:layout_gravity="center"
         android:layout_marginTop="90sp"
         android:fontFamily="sans-serif-condensed-medium"
@@ -26,7 +25,7 @@
         android:layout_height="331dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/movie11"/>
+        app:lottie_rawRes="@raw/movie1icon"/>
 
     <TextView
         android:id="@+id/textView2"

@@ -23,6 +23,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
@@ -36,6 +38,11 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private FirebaseAuth mAuth;
     boolean passwordVisible;
+
+    private FirebaseAuth maFirebaseAuth=FirebaseAuth.getInstance();
+    //write a message to the dataBase
+    // gets the root of the real time database in the FB console
+    private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,10 +92,8 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     }
 
 
-    public void submit(View view){
-        signUp(editTextEmail.getText().toString(),editTextPass.getText().toString());
-    }
-    public void signUp(String email, String password){
+
+    public void signup(String email,String password){
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -97,9 +102,15 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i= new Intent(SignupPage.this,MainActivity2.class);
-                            startActivity(i);
+                            DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//getRefrence returns a root
+                            String key = myRef.push().getKey();
+                            User u1 = new User(email,password, editTextEmail.getText().toString());
+                            u1.setKey(key);
+                            myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
+                            myRef.setValue(u1);
 
+                            Intent i =new Intent (SignupPage.this,MainActivity.class);
+                            startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -108,6 +119,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
 
                         }
 
+                        // ...
                     }
                 });
     }

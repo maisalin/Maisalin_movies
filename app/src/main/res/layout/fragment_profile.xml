@@ -1,15 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/holo_purple">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+        android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewMaina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:text="my"
+                android:textSize="70sp" />
+
+            <TextView
+                android:id="@+id/textViewMain2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="profile"
+                android:textSize="70sp"
+                android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextNameProfile"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="user name"
+            android:inputType="textEmailAddress"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/editTextEmailAddressProfile"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/editTextPasswordProfile"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="8dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit" />
+    </LinearLayout>
+
 
 
 </RelativeLayout>
