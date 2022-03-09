@@ -12,6 +12,11 @@
         <activity
             android:name=".FirstActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <receiver
             android:name=".NotificationReceiver"
@@ -19,7 +24,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity2"
-            android:exported="true" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".Intro"
             android:exported="true">
@@ -44,11 +50,6 @@
         <activity
             android:name=".ArrayListActivity"
             android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity
             android:name=".profileActivity"

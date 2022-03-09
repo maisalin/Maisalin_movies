@@ -28,7 +28,7 @@ public class FavoritesFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_favorites,container,false);
 
 
-
+    /*
         list = new ArrayList<>();
 
 
@@ -54,5 +54,6 @@ public class FavoritesFragment extends Fragment {
                 Toast.makeText(getApplicationContext(),"Item:" +list.get(i),Toast.LENGTH_LONG).show();
             }
         });
+        */
     }
 }

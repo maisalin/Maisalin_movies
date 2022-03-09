@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,10 +25,10 @@ public class ProfileFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private EditText userName;
-    private EditText email;
-    private EditText password;
-    private EditText location;
+    private TextView userName;
+    private TextView password;
+    private TextView email;
+
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -92,7 +93,7 @@ public class ProfileFragment extends Fragment {
         userName=rootView.findViewById(R.id.editTextNameProfile);
         email=rootView.findViewById(R.id.editTextEmailAddressProfile);
         password=rootView.findViewById(R.id.editTextPasswordProfile);
-        DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//getRefrence returns a root
+        DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get reference that returns a root
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
