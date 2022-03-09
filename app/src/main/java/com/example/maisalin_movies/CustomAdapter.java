@@ -42,14 +42,16 @@ public class CustomAdapter extends ArrayAdapter <Item> {
         if (item != null) {
             ImageView imageView = view.findViewById(R.id.imageItem);
             TextView textViewDescription = view.findViewById(R.id.textViewDesc);
-            Button itemButton = view.findViewById(R.id.itemButton);
-
+          //  Button itemButton = view.findViewById(R.id.itemButton);
+/*
             itemButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(context ,"this item was added to whatever",Toast.LENGTH_SHORT).show();
                 }
             });
+
+ */
             imageView.setImageResource(item.getResId());
             textViewDescription.setText(item.getDescription());
         }

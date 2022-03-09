@@ -18,11 +18,11 @@ import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements DialogInterface.OnClickListener {
 
-   // private CardView popular1,popular2 ,popular3, movie01,movie02,movie04;
-   // private RelativeLayout tvShowCard, popularCard, moviesCard, tvShows2Card, romComsCard;
-   //implements DialogInterface.OnClickListener
+     private CardView popular1,popular2 ,popular3, movie01,movie02,movie04;
+      private RelativeLayout tvShowCard, popularCard, moviesCard, tvShows2Card, romComsCard;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         //hide bar
         getSupportActionBar().hide();
 
-        /*
+
         popularCard =findViewById(R.id.popular1);
         popularCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("name","Divergent");
                 startActivity(i);
             }
-        });*/
+        });
 
     }
-/*
+
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if(i == dialogInterface.BUTTON_POSITIVE){
@@ -64,5 +64,5 @@ public class MainActivity extends AppCompatActivity {
         builder.setNegativeButton("No", this);
         AlertDialog dialog = builder.create();
         dialog.show();
-    }*/
+    }
 }

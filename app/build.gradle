@@ -26,6 +26,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
 }
 
 dependencies {
@@ -51,5 +58,6 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'com.airbnb.android:lottie:5.0.1'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }

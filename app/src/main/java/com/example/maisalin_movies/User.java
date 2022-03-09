@@ -5,17 +5,17 @@ public class User {
     private String password;
     private String userName;
     private String image;
-    private String adress;
+    //private String adress;
     private String key;
 
-    public User(String userName, String email, String password, String image, String adress, String key) {
+   /* public User(String userName, String email, String password, String image, String adress, String key) {
         this.userName = userName;
         this.email = email;
         this.password = password;
         this.image = image;
         this.adress = adress;
         this.key = key;
-    }
+    }*/
 
     public User() {
     }
@@ -58,13 +58,15 @@ public class User {
         this.image = image;
     }
 
+
+    /*
     public String getAdress() {
         return adress;
     }
 
     public void setAdress(String adress) {
         this.adress = adress;
-    }
+    }*/
 
     public String getKey() {
         return key;

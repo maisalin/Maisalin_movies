@@ -183,7 +183,7 @@
                     android:backgroundTint="@color/white"
                     android:layout_marginBottom="98dp"
                     android:layout_marginLeft="90dp"
-                    android:onClick="submit"
+
                     />
 
             </LinearLayout>

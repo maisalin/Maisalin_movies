@@ -33,7 +33,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
 
     private static final String TAG = "FIREBASE";
     //declaring all the components
-    private EditText editTextEmail, editTextPass;
+    private EditText editTextEmail, editTextPass,editTextName;
     private Button submit;
     private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private FirebaseAuth mAuth;
@@ -50,9 +50,12 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.activity_signup_page);
         //Returns a reference to the instance of the project Firebase
 
+
+        editTextName = findViewById(R.id.editTextName);
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPass= findViewById(R.id.editTextPass);
         submit=findViewById(R.id.editButton);
+        submit.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -102,14 +105,14 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//getRefrence returns a root
+                            DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get Refrence returns a root
                             String key = myRef.push().getKey();
-                            User u1 = new User(email,password, editTextEmail.getText().toString());
+                            User u1 = new User(editTextName.getText().toString(),email,password);
                             u1.setKey(key);
                             myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
                             myRef.setValue(u1);
 
-                            Intent i =new Intent (SignupPage.this,MainActivity.class);
+                            Intent i =new Intent (SignupPage.this,MainActivity2.class);
                             startActivity(i);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -124,19 +127,28 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                 });
     }
 
-
     @Override
     public void onClick(View view) {
-        Calendar cal = Calendar.getInstance();
-        int year = cal.get(Calendar.YEAR);
-        int month = cal.get(Calendar.MONTH);
-        int day = cal.get(Calendar.DAY_OF_MONTH);
-
-        DatePickerDialog dialog = new DatePickerDialog(SignupPage.this,
-                android.R.style.Theme_Holo_Dialog_MinWidth,
-                mOnDateSetListener,
-                year, month, day);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.show();
+        if (view == submit) {
+            signup(editTextEmail.getText().toString(), editTextPass.getText().toString());
+        }
     }
+
+    /*
+    @Override
+    public void onClick(View view) {
+
+            Calendar cal = Calendar.getInstance();
+            int year = cal.get(Calendar.YEAR);
+            int month = cal.get(Calendar.MONTH);
+            int day = cal.get(Calendar.DAY_OF_MONTH);
+
+            DatePickerDialog dialog = new DatePickerDialog(SignupPage.this,
+                    android.R.style.Theme_Holo_Dialog_MinWidth,
+                    mOnDateSetListener,
+                    year, month, day);
+            dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            dialog.show();
+    }*/
+
 }

@@ -38,6 +38,8 @@ public class ArrayListActivity extends AppCompatActivity{
         //connect adapter with view
         myListView.setAdapter(myAdapter);
 
+        //
+        myListView.setDivider(null);
         //connects click listener to items in the list
 
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
