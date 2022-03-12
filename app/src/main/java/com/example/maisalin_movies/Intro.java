@@ -44,6 +44,8 @@ public class Intro extends AppCompatActivity implements DialogInterface.OnClickL
 
     }
 
+    //dialogggg
+
     @Override
     public void onClick(DialogInterface dialogInterface, int i) {
         if( i == dialogInterface.BUTTON_POSITIVE){

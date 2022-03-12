@@ -34,6 +34,7 @@ public class DetailActivity extends AppCompatActivity {
 
         //end
         String name =getIntent().getStringExtra("name");
+
         loadContentByName(name);
 
 

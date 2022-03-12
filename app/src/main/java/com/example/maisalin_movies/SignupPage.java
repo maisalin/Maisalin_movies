@@ -1,9 +1,11 @@
 package com.example.maisalin_movies;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -28,7 +30,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
-public class SignupPage extends AppCompatActivity implements View.OnClickListener {
+public class SignupPage extends AppCompatActivity implements View.OnClickListener,DialogInterface.OnClickListener {
 
 
     private static final String TAG = "FIREBASE";
@@ -38,6 +40,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     private DatePickerDialog.OnDateSetListener mOnDateSetListener;
     private FirebaseAuth mAuth;
     boolean passwordVisible;
+    private DialogInterface dialog;
 
     private FirebaseAuth maFirebaseAuth=FirebaseAuth.getInstance();
     //write a message to the dataBase
@@ -130,6 +133,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (view == submit) {
+
             signup(editTextEmail.getText().toString(), editTextPass.getText().toString());
         }
     }
@@ -150,5 +154,30 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             dialog.show();
     }*/
+
+
+    @Override
+    public void onClick(DialogInterface dialogInterface, int i) {
+        if( i == dialogInterface.BUTTON_POSITIVE){
+            super.onBackPressed();
+            dialogInterface.cancel();
+        }
+        if( i== dialogInterface.BUTTON_NEGATIVE){
+            dialogInterface.cancel();
+        }
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder= new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure? ");
+        builder.setCancelable(false);
+        builder.setPositiveButton("Yes",this);
+        builder.setNegativeButton("No", this);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
 
 }
