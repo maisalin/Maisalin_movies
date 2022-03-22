@@ -48,7 +48,8 @@ public class DetailActivity extends AppCompatActivity {
             MediaController mediaController = new MediaController(this);
             videoView.setMediaController(mediaController);
             mediaController.setAnchorView(videoView);
-        }else if(name.equals("LaCasa")){
+        }
+        else if(name.equals("LaCasa")){
             fileHandler1 = new FileHandler("LaCasaA", this);
             fileHandler1.readFile();
             fileHandler2=new FileHandler("LaCasa", this);
