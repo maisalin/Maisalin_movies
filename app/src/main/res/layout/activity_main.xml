@@ -233,8 +233,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="30dp"
-                    android:text="Bingeworhty suspenseful Tv shows"
                     android:fontFamily="@font/poppins_regular"
+                    android:text="Bingeworhty suspenseful Tv shows"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="25dp"
                     android:textStyle="italic" />
@@ -256,7 +256,7 @@
                         android:layout_height="240dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:id="@+id/toyboy">
+                        android:id="@+id/tvShow1">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -268,7 +268,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/you"
+                        android:id="@+id/tvShow2"
                         android:layout_width="150dp"
                         android:layout_height="240dp"
                         android:layout_marginLeft="10dp"
@@ -289,7 +289,7 @@
                         android:layout_height="240dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:id="@+id/elite">
+                        android:id="@+id/tvShow3">
 
                         <ImageView
                             android:layout_width="match_parent"
@@ -306,7 +306,7 @@
                         android:layout_height="240dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:id="@+id/theSociety"
+                        android:id="@+id/tvShow4"
                         >
                         <ImageView
                             android:layout_width="match_parent"
@@ -325,7 +325,7 @@
                         android:layout_height="240dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:id="@+id/lost"
+                        android:id="@+id/tvShow5"
                         >
                         <ImageView
                             android:layout_width="match_parent"
@@ -343,7 +343,7 @@
                         android:layout_height="240dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:id="@+id/laCasa"
+                        android:id="@+id/tvShow6"
                         >
                         <ImageView
                             android:layout_width="match_parent"
@@ -360,7 +360,7 @@
                         android:layout_height="240dp"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="10dp"
-                        android:id="@+id/reasonsWhy"
+                        android:id="@+id/tvShow7"
                         >
                         <ImageView
                             android:layout_width="match_parent"

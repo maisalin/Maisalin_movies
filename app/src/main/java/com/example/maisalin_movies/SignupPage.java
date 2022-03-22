@@ -133,7 +133,6 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         if (view == submit) {
-
             signup(editTextEmail.getText().toString(), editTextPass.getText().toString());
         }
     }
