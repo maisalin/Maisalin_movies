@@ -155,18 +155,48 @@ public class DetailActivity extends AppCompatActivity {
             fileHandler2=new FileHandler("Obx", this);
             fileHandler2.readFile();
         }
-        else if(name.equals("")){
-            fileHandler1 = new FileHandler("", this);
+        else if(name.equals("Summer")){
+            fileHandler1 = new FileHandler("SummerA", this);
             fileHandler1.readFile();
-            fileHandler2=new FileHandler("", this);
+            fileHandler2=new FileHandler("Summer", this);
             fileHandler2.readFile();
         }
-        else if(name.equals("")){
-            fileHandler1 = new FileHandler("", this);
+        else if(name.equals("FriendsW")){
+            fileHandler1 = new FileHandler("FriendsWA", this);
             fileHandler1.readFile();
-            fileHandler2=new FileHandler("", this);
+            fileHandler2=new FileHandler("FriendsW", this);
             fileHandler2.readFile();
         }
+        else if(name.equals("Holidate")){
+            fileHandler1 = new FileHandler("HolidateA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("Holidate", this);
+            fileHandler2.readFile();
+        }
+        else if(name.equals("GoWith")){
+            fileHandler1 = new FileHandler("GoWithA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("GoWith", this);
+            fileHandler2.readFile();
+        }
+        else if(name.equals("ToAll")){
+            fileHandler1 = new FileHandler("ToAllA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("ToAll", this);
+            fileHandler2.readFile();
+        }
+        else if(name.equals("Love")){
+            fileHandler1 = new FileHandler("LoveA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("Love", this);
+            fileHandler2.readFile();
+        }
+        /*   else if(name.equals("")){
+                    fileHandler1 = new FileHandler("", this);
+                    fileHandler1.readFile();
+                    fileHandler2=new FileHandler("", this);
+                    fileHandler2.readFile();
+              }*/
 
     }
 }

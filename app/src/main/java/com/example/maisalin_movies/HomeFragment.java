@@ -17,7 +17,8 @@ import androidx.fragment.app.Fragment;
 public class HomeFragment extends Fragment {
     @Nullable
     private CardView popular1,popular2 ,popular3, movie01,movie02,movie04,movie03,
-            tvShow1,tvShow2,tvShow3,tvShow4,tvShow5,tvShow6,tvShow7,tv1,tv2,tv3,tv4,tv5,tv6;
+            tvShow1,tvShow2,tvShow3,tvShow4,tvShow5,tvShow6,tvShow7,tv1,tv2,tv3,tv4,tv5,tv6,
+            romCom1,romCom2,romCom3,romCom4,romCom5,romCom6;
     private RelativeLayout tvShowCard, popularCard, moviesCard, tvShows2Card, romComsCard;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -43,6 +44,12 @@ public class HomeFragment extends Fragment {
         tv4=(CardView) v.findViewById(R.id.tv24);
         tv5=(CardView) v.findViewById(R.id.tv25);
         tv6=(CardView) v.findViewById(R.id.tv26);
+        romCom1= (CardView) v.findViewById(R.id.romcom1);
+        romCom2= (CardView) v.findViewById(R.id.romcom2);
+        romCom3= (CardView) v.findViewById(R.id.romcom3);
+        romCom4= (CardView) v.findViewById(R.id.romcom4);
+        romCom5= (CardView) v.findViewById(R.id.romcom5);
+        romCom6= (CardView) v.findViewById(R.id.romcom6);
 
         return v;
     }
@@ -211,6 +218,55 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
+        romCom1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "Summer");
+                startActivity(i);
+            }
+        });
+        romCom2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "FriendsW");
+                startActivity(i);
+            }
+        });
+        romCom3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "Holidate");
+                startActivity(i);
+            }
+        });
+        romCom4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "GoWith");
+                startActivity(i);
+            }
+        });
+        romCom5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "ToAll");
+                startActivity(i);
+            }
+        });
+        romCom6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "Love");
+                startActivity(i);
+            }
+        });
+
     }
 
 }
