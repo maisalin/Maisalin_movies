@@ -78,6 +78,36 @@ public class DetailActivity extends AppCompatActivity {
             videoView.setMediaController(mediaController);
             mediaController.setAnchorView(videoView);
         }
+        else if(name.equals("Vampire")) {
+            fileHandler1 = new FileHandler("VampireA", this);
+            fileHandler1.readFile();
+            fileHandler2 = new FileHandler("Vampire", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.vampire;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("Shadow")) {
+            fileHandler1 = new FileHandler("ShadowA", this);
+            fileHandler1.readFile();
+            fileHandler2 = new FileHandler("Shadow", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.shadow;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
         else if(name.equals("Fallen")){
             fileHandler1 = new FileHandler("FallenA", this);
             fileHandler1.readFile();

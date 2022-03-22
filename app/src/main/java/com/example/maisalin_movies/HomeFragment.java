@@ -16,7 +16,7 @@ import androidx.fragment.app.Fragment;
 
 public class HomeFragment extends Fragment {
     @Nullable
-    private CardView popular1,popular2 ,popular3, movie01,movie02,movie04,movie03,
+    private CardView popular1,popular2 ,popular3,popular4,popular5,movie01,movie02,movie04,movie03,
             tvShow1,tvShow2,tvShow3,tvShow4,tvShow5,tvShow6,tvShow7,tv1,tv2,tv3,tv4,tv5,tv6,
             romCom1,romCom2,romCom3,romCom4,romCom5,romCom6;
     private RelativeLayout tvShowCard, popularCard, moviesCard, tvShows2Card, romComsCard;
@@ -27,6 +27,8 @@ public class HomeFragment extends Fragment {
         popular1=(CardView) v.findViewById(R.id.popular1);
         popular2=(CardView) v.findViewById(R.id.popular2);
         popular3=(CardView) v.findViewById(R.id.popular3);
+        popular4=(CardView) v.findViewById(R.id.popular4);
+        popular5=(CardView) v.findViewById(R.id.popular5);
         movie01=(CardView) v.findViewById(R.id.movie01);
         movie02=(CardView) v.findViewById(R.id.movie02);
         movie03=(CardView) v.findViewById(R.id.movie03);
@@ -79,6 +81,22 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
                 i.putExtra("name", "Under");
+                startActivity(i);
+            }
+        });
+        popular4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "Vampire");
+                startActivity(i);
+            }
+        });
+        popular5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), DetailActivity.class);
+                i.putExtra("name", "Shadow");
                 startActivity(i);
             }
         });
