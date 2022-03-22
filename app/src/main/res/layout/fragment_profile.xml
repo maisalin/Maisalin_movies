@@ -9,29 +9,31 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textViewMaina"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:text="my"
-                android:textSize="70sp" />
+        <TextView
+            android:id="@+id/textViewMaina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="my"
+            android:textSize="70sp" />
 
-            <TextView
-                android:id="@+id/textViewMain2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="profile"
-                android:textSize="70sp"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textViewMain2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="profile"
+            android:textSize="70sp"
+            android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/editTextNameProfile"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="user name"
@@ -42,9 +44,10 @@
             android:id="@+id/editTextEmailAddressProfile"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_baseline_email_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="Email"
@@ -55,19 +58,17 @@
             android:id="@+id/editTextPasswordProfile"
             android:layout_width="match_parent"
             android:layout_height="62dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_baseline_lock_open_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="8dp" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit" />
+
     </LinearLayout>
 
 
