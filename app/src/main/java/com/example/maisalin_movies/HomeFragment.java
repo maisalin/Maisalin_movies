@@ -23,7 +23,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v= inflater.inflate(R.layout.activity_main,container, false);
+        View v= inflater.inflate(R.layout.fragment_home,container, false);
         popular1=(CardView) v.findViewById(R.id.popular1);
         popular2=(CardView) v.findViewById(R.id.popular2);
         popular3=(CardView) v.findViewById(R.id.popular3);

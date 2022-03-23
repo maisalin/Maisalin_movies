@@ -1,15 +1,680 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/darker_gray">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home Fragment"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"/>
+    android:layout_height="match_parent">
 
 
-</RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="Welcome to Netfilm"
+                android:textColor="@color/black"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/popularCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Popular "
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/popular1">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie4" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="350dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/popular2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv4" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="350dp"
+                    android:id="@+id/popular3"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie1"
+                        />
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="350dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/popular4">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_2" />
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="350dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/popular5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_1" />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/moviesCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="Movies"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/movie01"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie7" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20dp"
+                    android:id="@+id/movie02">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie6"/>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/movie03"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie3"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/movie04"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/movie2" />
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/tvShowCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Bingeworhty suspenseful Tv shows"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvShow1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv16"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tvShow2"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv10" />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvShow3">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv11"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvShow4"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv14"/>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvShow5"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv15"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvShow6"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv13"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvShow7"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv12"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/tvShows2Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="Tv action &amp; adventure"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv21"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv21"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv22">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv22"/>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv23"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv23"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv24"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv24"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv25"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv25"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="150dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tv26"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/tv26"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:id="@+id/romComsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Romantic comedies movies "
+                android:textColor="@android:color/darker_gray"
+                android:textSize="25dp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/romcom1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m11"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/romcom2">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m12"/>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/romcom3">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m13"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/romcom4">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m14"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/romcom5">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m15"/>
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/romcom6">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/m16"/>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</ScrollView>

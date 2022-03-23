@@ -42,7 +42,7 @@ public class NotificationIntentService extends IntentService {
         noBuilder.setContentText("Hi! welcome to netfilm ;)");
         noBuilder.setSmallIcon(R.drawable.ic_baseline_person_24);
         //this is the notification icon
-        Intent noIntent1=new Intent(this,MainActivity.class);
+        Intent noIntent1=new Intent(this,FirstActivity.class);
         //this intent will be pending until the user clicks on the notification and will activate the activity specified in the intent
         PendingIntent pendingIntent=PendingIntent.getActivity(this,2,noIntent1,PendingIntent.FLAG_UPDATE_CURRENT);
         noBuilder.setContentIntent(pendingIntent);

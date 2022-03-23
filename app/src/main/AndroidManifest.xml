@@ -58,9 +58,6 @@
         <activity
             android:name=".SignupPage"
             android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
 
 
     </application>
