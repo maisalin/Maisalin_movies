@@ -69,8 +69,20 @@
             android:inputType="textPassword"
             android:padding="8dp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Take Picture"
+            android:id="@+id/buttonCamera"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Picture"
+            android:id="@+id/buttonGallery"
+            />
 
     </LinearLayout>
+
 
 
 

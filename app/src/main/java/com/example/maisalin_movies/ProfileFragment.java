@@ -29,7 +29,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.FileNotFoundException;
 
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment implements View.OnClickListener{
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -38,17 +38,11 @@ public class ProfileFragment extends Fragment {
     private TextView password;
     private TextView email;
 
-    /*
-    //request for camera for activity result
-    private static final int CAMERA_REQUEST = 0;
+    //gallery and camera
     private static final int GALLERY_REQUEST = 1;
-
-
-    //attributes
-    private Button buttonCamera, buttonGallery;
-    private ImageView imageViewProfile;
-    // for picture of camera
-    private Bitmap picture;*/
+    private static final int CAMERA_REQUEST = 0;
+    //for picture of camera
+    private Bitmap picture;
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -137,45 +131,42 @@ public class ProfileFragment extends Fragment {
         return rootView;
     }
 
-    /*
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.buttonCamera){
             Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(i, CAMERA_REQUEST);
-
-        }else {
+        }else if(view.getId() == R.id.buttonGallery){
             Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(i, GALLERY_REQUEST);
-
-        }
-    }
-
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        }}
+        @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == CAMERA_REQUEST) {
-            if (resultCode == RESULT_OK) {
-                //the image captured is saved in the data object
+        if(requestCode == CAMERA_REQUEST){
+            //RESULT_OK --> the camera managed to take a picture
+            if(resultCode == RESULT_OK){
                 picture = (Bitmap) data.getExtras().get("data");
                 //set image captured to be the new image
-                imageViewProfile.setImageBitmap(picture);
+                profilepic.setImageBitmap(picture);
             }
-        } else {
-            if (resultCode == RESULT_OK) {
-                Uri targetUri = data.getData();
-                try {
-                    //Decode an input stream into a bitmap.
-                    picture = BitmapFactory.decodeStream(getContentResolver().openInputStream(targetUri));
-                    imageViewProfile.setImageBitmap(picture);
-                } catch (FileNotFoundException e) {
+        }
+        else
+        {
+            if(resultCode == RESULT_OK){
+                Uri targetUri = data.getData();//the file location
+                try{
+                    //Decode an input stream into bitmap
+                    picture = BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(targetUri));
+                    profilepic.setImageBitmap(picture);
+                }
+                //catch - don't kill the application if the file didn't open --> print the error
+                catch(FileNotFoundException e){
                     e.printStackTrace();
                 }
             }
         }
 
-    }*/
+    }
 
 }
