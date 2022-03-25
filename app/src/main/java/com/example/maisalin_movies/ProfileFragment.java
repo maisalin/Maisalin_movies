@@ -1,5 +1,7 @@
 package com.example.maisalin_movies;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,6 +40,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     private TextView password;
     private TextView email;
 
+    private Button buttonCamera, buttonGallery;
+    private ImageView profilepic;
     //gallery and camera
     private static final int GALLERY_REQUEST = 1;
     private static final int CAMERA_REQUEST = 0;
@@ -47,6 +51,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseUser user = mAuth.getCurrentUser();
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -107,6 +112,9 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         userName=rootView.findViewById(R.id.editTextNameProfile);
         email=rootView.findViewById(R.id.editTextEmailAddressProfile);
         password=rootView.findViewById(R.id.editTextPasswordProfile);
+        buttonCamera=rootView.findViewById(R.id.buttonCamera);
+        buttonGallery=rootView.findViewById(R.id.buttonGallery);
+        profilepic=rootView.findViewById(R.id.profilePic);
         DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get reference that returns a root
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
