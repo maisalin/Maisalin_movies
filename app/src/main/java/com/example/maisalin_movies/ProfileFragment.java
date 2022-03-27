@@ -21,6 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.card.MaterialCardView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -40,7 +41,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     private TextView password;
     private TextView email;
 
-    private Button buttonCamera, buttonGallery;
+    private MaterialCardView cardGallery,cardCamera;
     private ImageView profilepic;
     //gallery and camera
     private static final int GALLERY_REQUEST = 1;
@@ -113,13 +114,14 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         email=rootView.findViewById(R.id.editTextEmailAddressProfile);
         password=rootView.findViewById(R.id.editTextPasswordProfile
         );
-        buttonCamera=rootView.findViewById(R.id.buttonCamera);
-        buttonCamera.setOnClickListener(this);
+        cardCamera=rootView.findViewById(R.id.cardCamera);
+        cardCamera.setOnClickListener(this);
 
-        buttonGallery =rootView.findViewById(R.id.buttonGallery);
-        buttonGallery.setOnClickListener(this);
+        cardGallery =rootView.findViewById(R.id.cardGallery);
+        cardGallery.setOnClickListener(this);
 
         profilepic=rootView.findViewById(R.id.profilePic);
+
         DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get reference that returns a root
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -146,10 +148,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.buttonCamera){
+        if(view.getId() == R.id.cardCamera){
             Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(i, CAMERA_REQUEST);
-        }else if(view.getId() == R.id.buttonGallery){
+        }else if(view.getId() == R.id.cardGallery){
             Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(i, GALLERY_REQUEST);
         }}
