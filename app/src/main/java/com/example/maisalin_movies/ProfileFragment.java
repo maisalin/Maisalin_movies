@@ -111,9 +111,14 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
         userName=rootView.findViewById(R.id.editTextNameProfile);
         email=rootView.findViewById(R.id.editTextEmailAddressProfile);
-        password=rootView.findViewById(R.id.editTextPasswordProfile);
+        password=rootView.findViewById(R.id.editTextPasswordProfile
+        );
         buttonCamera=rootView.findViewById(R.id.buttonCamera);
-        buttonGallery=rootView.findViewById(R.id.buttonGallery);
+        buttonCamera.setOnClickListener(this);
+
+        buttonGallery =rootView.findViewById(R.id.buttonGallery);
+        buttonGallery.setOnClickListener(this);
+
         profilepic=rootView.findViewById(R.id.profilePic);
         DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get reference that returns a root
         myRef.addValueEventListener(new ValueEventListener() {

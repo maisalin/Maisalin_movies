@@ -37,10 +37,10 @@ public class profileActivity extends AppCompatActivity implements View.OnClickLi
         getSupportActionBar().hide();
 
         //gets reference for the design components
-        buttonCamera= findViewById(R.id.buttonCamera);
+        buttonCamera= findViewById(R.id.buttonCameraa);
         buttonCamera.setOnClickListener(this);
 
-        buttonGallery = findViewById(R.id.buttonGallery);
+        buttonGallery = findViewById(R.id.buttonGalleryy);
         buttonGallery.setOnClickListener(this);
 
         imageViewProfile = findViewById(R.id.imageViewProfile);
