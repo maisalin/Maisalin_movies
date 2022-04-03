@@ -39,7 +39,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "Divergent");
+                i.putExtra("name", "");
                 startActivity(i);
             }
         });
@@ -47,7 +47,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "LaCasa");
+                i.putExtra("name", "");
                 startActivity(i);
             }
         });
@@ -55,7 +55,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "LaCasa");
                 startActivity(i);
             }
         });
@@ -103,7 +103,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "FriendsW");
                 startActivity(i);
             }
         });
