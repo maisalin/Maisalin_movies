@@ -71,8 +71,8 @@ public class MainActivity2 extends AppCompatActivity {
                         case R.id.nav_favorite:
                             selectedFragment = new FavoritesFragment();
                             break;
-                        case R.id.nav_search:
-                            selectedFragment = new SearchFragment();
+                        case R.id.nav_top:
+                            selectedFragment = new TopFragment();
                             break;
                         case R.id.nav_person:
                             selectedFragment = new ProfileFragment();

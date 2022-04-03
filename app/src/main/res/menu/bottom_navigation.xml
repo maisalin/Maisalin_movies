@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_baseline_favorite_24"
         android:title="Favorites" />
     <item
-        android:id="@+id/nav_search"
-        android:icon="@drawable/ic_baseline_search_24"
-        android:title="Search" />
+        android:id="@+id/nav_top"
+        android:icon="@drawable/ic_baseline_fire_24"
+        android:title="Top" />
     <item
         android:id="@+id/nav_person"
         android:icon="@drawable/ic_baseline_person_24"
