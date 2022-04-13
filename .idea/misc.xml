@@ -8,6 +8,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/corners.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_camera_alt_24.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_favorite2_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.19583333333333333" />
@@ -27,13 +28,16 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_main2.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_signup_page.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fav2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fav_item.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fragment_favorites.xml" value="0.15081521739130435" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fragment_home.xml" value="0.13183730715287517" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fragment_home.xml" value="0.1528846153846154" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fragment_search.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fragment_top.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/item.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/layout.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/moviesrow.xml" value="0.12681159420289856" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/moviesrow.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/menu/bottom_navigation.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/menu/menu.xml" value="0.6666666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19166666666666668" />

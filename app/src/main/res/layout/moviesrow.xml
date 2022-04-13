@@ -25,8 +25,7 @@
                 android:id="@+id/imageItem"
                 android:layout_width="50dp"
                 android:layout_height="70dp"
-                android:layout_marginStart="20dp"
-                />
+                android:layout_marginStart="20dp" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
@@ -40,12 +39,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="description"
-                    android:textColor="#FFFFFF"
                     android:textSize="21sp" />
+
             </RelativeLayout>
 
+            <Button
+                android:id="@+id/favBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="110dp"
+                android:background="@drawable/ic_baseline_favorite2_24" />
         </LinearLayout>
 
-    </RelativeLayout>
 
+    </RelativeLayout>
 </LinearLayout>

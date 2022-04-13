@@ -68,7 +68,15 @@
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/movie4" />
+                        android:src="@drawable/movie4"
+                        />
+                    <Button
+                        android:id="@+id/favBtn"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="270dp"
+                        android:background="@drawable/ic_baseline_favorite_24"/>
 
 
                 </androidx.cardview.widget.CardView>
@@ -87,6 +95,15 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/tv4" />
+                    <Button
+                        android:id="@+id/favBtn2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="280dp"
+                        android:background="@drawable/ic_baseline_favorite_24"/>
+
+
 
 
                 </androidx.cardview.widget.CardView>

@@ -11,49 +11,33 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class FavoritesFragment extends Fragment {
-    @Nullable
-    //the object of the view - design
-    private ListView myListView;
-    //the object for the adapter connecting the data to the view
-    private CustomAdapter myAdapter;
-    //object containing the items to be displayed - Data
-    private ArrayList<Item> list;
+
+
+    private ArrayList<MovieItem> movieItems = new ArrayList<>();
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_favorites,container,false);
+        View root = inflater.inflate(R.layout.fav2, container, false);
+
+        RecyclerView recyclerView = root.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(new MovieAdapter(movieItems, getActivity()));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        movieItems.add(new MovieItem(R.drawable.bridgerton, "bridgerton","0","0"));
+        movieItems.add(new MovieItem(R.drawable.movie1, "idk","0","0"));
+        movieItems.add(new MovieItem(R.drawable.lucifer, "idk","0","0"));
+        movieItems.add(new MovieItem(R.drawable.movie3, "","0","0"));
+        movieItems.add(new MovieItem(R.drawable.movie4, "idk10","0","0"));
 
 
-    /*
-        list = new ArrayList<>();
+        return root;
 
-
-        list.add(new Item("my first item",R.drawable.img,true,50));
-        list.add(new Item("idk",R.drawable.img,true,34));
-        list.add(new Item("this is supposed to be a string",R.drawable.img,true,74));
-        list.add(new Item("weeeeee",R.drawable.img,true,21));
-        myListView = findViewById(R.id.myListView);
-
-        //connect adapter with data
-        myAdapter = new CustomAdapter(this, R.layout.moviesrow, list);
-
-        //connect adapter with view
-        myListView.setAdapter(myAdapter);
-
-        //
-        myListView.setDivider(null);
-        //connects click listener to items in the list
-
-        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(getApplicationContext(),"Item:" +list.get(i),Toast.LENGTH_LONG).show();
-            }
-        });
-        */
     }
 }
