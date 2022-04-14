@@ -70,12 +70,12 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/movie4"
                         />
-                    <Button
-                        android:id="@+id/favBtn"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                    <ImageView
+                        android:id="@+id/fav"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="bottom"
-                        android:layout_marginLeft="270dp"
+                        android:layout_marginLeft="290dp"
                         android:background="@drawable/ic_baseline_favorite_24"/>
 
 
@@ -95,12 +95,12 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/tv4" />
-                    <Button
-                        android:id="@+id/favBtn2"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
+                    <ImageView
+                        android:id="@+id/fav2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="bottom"
-                        android:layout_marginLeft="280dp"
+                        android:layout_marginLeft="290dp"
                         android:background="@drawable/ic_baseline_favorite_24"/>
 
 
@@ -124,6 +124,12 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/movie1"
                         />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="290dp"
+                        android:background="@drawable/ic_baseline_favorite_24"/>
 
 
                 </androidx.cardview.widget.CardView>
@@ -141,6 +147,12 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/vamp" />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="290dp"
+                        android:background="@drawable/ic_baseline_favorite_24"/>
 
 
                 </androidx.cardview.widget.CardView>
@@ -158,6 +170,12 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/img_1" />
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="290dp"
+                        android:background="@drawable/ic_baseline_favorite_24"/>
 
 
                 </androidx.cardview.widget.CardView>
@@ -226,7 +244,15 @@
                         android:layout_height="match_parent"
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/movie6"/>
+                        android:src="@drawable/movie6"
+                        />
+                    <ImageView
+                        android:id="@+id/favBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="290dp"
+                        android:background="@drawable/ic_baseline_favorite_24"/>
 
 
 

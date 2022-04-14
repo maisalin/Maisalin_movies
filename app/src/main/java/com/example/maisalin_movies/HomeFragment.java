@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
@@ -15,12 +17,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     @Nullable
     private CardView popular1,popular2 ,popular3,popular4,popular5,movie01,movie02,movie04,movie03,
             tvShow1,tvShow2,tvShow3,tvShow4,tvShow5,tvShow6,tvShow7,tv1,tv2,tv3,tv4,tv5,tv6,
             romCom1,romCom2,romCom3,romCom4,romCom5,romCom6;
     private RelativeLayout tvShowCard, popularCard, moviesCard, tvShows2Card, romComsCard;
+    private ImageView fav,fav2;
+    private boolean like;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
@@ -53,6 +57,11 @@ public class HomeFragment extends Fragment {
         romCom4= (CardView) v.findViewById(R.id.romcom4);
         romCom5= (CardView) v.findViewById(R.id.romcom5);
         romCom6= (CardView) v.findViewById(R.id.romcom6);
+        fav=v.findViewById(R.id.fav);
+        fav2=v.findViewById(R.id.fav2);
+
+        fav.setOnClickListener(this::onClick);
+        fav2.setOnClickListener(this::onClick);
 
         return v;
     }
@@ -285,7 +294,18 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
-
     }
 
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.fav:
+                fav.setImageResource(R.drawable.ic_baseline_favorite2_24);
+                break;
+            case R.id.fav2:
+                fav2.setImageResource(R.drawable.ic_baseline_favorite2_24);
+                break;
+        }
+    }
 }

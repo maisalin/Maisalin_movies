@@ -1,7 +1,6 @@
 package com.example.maisalin_movies;
 
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -115,7 +114,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         try {
             while (cursor.moveToNext() ) {
                 //TO CHECK
-                @SuppressLint("Range") String item_fav_status = cursor.getString(cursor.getColumnIndex(FavDB.FAVORITE_STATUS));
+                int x = cursor.getColumnIndex(FavDB.FAVORITE_STATUS);
+                String item_fav_status = cursor.getString(x);
                 movieItem.setFavStatus(item_fav_status);
 
                 //check fav status

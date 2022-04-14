@@ -3,8 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/CardView.Light">
+    android:layout_height="280dp"
+    style="@style/CardView.Light"
+    app:cardCornerRadius="8dp"
+    android:elevation="3dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp">
 
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="20dp"
@@ -27,7 +32,8 @@
             android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:layout_marginLeft="270dp"
-            android:background="@drawable/ic_baseline_favorite_24"/>
+            android:background="@drawable/ic_baseline_favorite_24"
+            />
 
 
         <TextView
@@ -62,8 +68,5 @@
             style="@style/TextAppearance.AppCompat.Body1"/>
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>

@@ -47,6 +47,8 @@ public class LoginPage extends AppCompatActivity implements View.OnLongClickList
         editTextName = findViewById(R.id.editTextName);
         editTextPass= findViewById(R.id.editTextPass);
         buttonLogin = findViewById(R.id.editButton);
+
+
         //sets the required button to response to long click, otherwise it won't
         buttonLogin.setOnLongClickListener(this);
         buttonLogin.setOnClickListener(this);
