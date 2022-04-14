@@ -138,7 +138,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                // Failed to read value
+                 Log.w("profile", "Failed to read value.", error.toException());
             }
         });
 

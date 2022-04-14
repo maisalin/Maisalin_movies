@@ -1,3 +1,16 @@
-����   2 � "kotlin/coroutines/SafeContinuation  �<T:Ljava/lang/Object;>Ljava/lang/Object;Lkotlin/coroutines/Continuation<TT;>;Lkotlin/coroutines/jvm/internal/CoroutineStackFrame; java/lang/Object  kotlin/coroutines/Continuation  2kotlin/coroutines/jvm/internal/CoroutineStackFrame  Lkotlin/PublishedApi; Lkotlin/SinceKotlin; version 1.3
-    getContext &()Lkotlin/coroutines/CoroutineContext; #Lorg/jetbrains/annotations/NotNull; delegate  Lkotlin/coroutines/Continuation;  	       this $Lkotlin/coroutines/SafeContinuation; result Ljava/lang/Object;
-    resumeWith (Ljava/lang/Object;)V  	   0kotlin/coroutines/intrinsics/CoroutineSingletons  	UNDECIDED 2Lkotlin/coroutines/intrinsics/CoroutineSingletons; ! "	   # RESULT 9Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Maisalin_movies" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>
