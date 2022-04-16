@@ -104,16 +104,11 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        //   buttonSend = (Button) getView().findViewById(R.id.buttonSend);
-
-        //Adding click listener
-        // buttonSend.setOnClickListener(this);
 
 
         userName=rootView.findViewById(R.id.editTextNameProfile);
         email=rootView.findViewById(R.id.editTextEmailAddressProfile);
-        password=rootView.findViewById(R.id.editTextPasswordProfile
-        );
+        password=rootView.findViewById(R.id.editTextPasswordProfile);
         cardCamera=rootView.findViewById(R.id.cardCamera);
         cardCamera.setOnClickListener(this);
 
@@ -128,7 +123,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()) {
                     User u = dataSnapshot.getValue(User.class);
-                    //Mis Haneen To check
+                    //
                     Log.i("Profile1111", "user" + u + " Id " + user.getUid() + " u" + u.getUserName() + u.getEmail() + u.getPassword());
                     updateUserData(new User(u.getUserName(), u.getEmail(), u.getPassword()));
                 }
