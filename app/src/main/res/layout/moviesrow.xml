@@ -43,13 +43,13 @@
 
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/favBtn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="110dp"
-                android:background="@drawable/ic_baseline_favorite2_24" />
+            <ImageView
+                android:id="@+id/favImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="290dp"
+                android:background="@drawable/ic_baseline_favorite_24"/>
         </LinearLayout>
 
 

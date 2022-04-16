@@ -247,7 +247,7 @@
                         android:src="@drawable/movie6"
                         />
                     <ImageView
-                        android:id="@+id/favBtn"
+                        android:id="@+id/fave"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="bottom"

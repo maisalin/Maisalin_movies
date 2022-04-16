@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/black">
 
 
     <RelativeLayout
@@ -18,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="TextView"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -44,8 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text="TextView"
-        android:textColor="@color/black"
-        android:textSize="24dp"
-        android:textStyle="normal" />
+        android:textColor="@color/gray"
+        android:textSize="20dp"
+        android:textStyle="italic" />
 
 </LinearLayout>

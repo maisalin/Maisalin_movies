@@ -76,7 +76,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
         ImageView imageView;
         TextView titleTextView, likeCountTextView;
-        Button favBtn;
+        ImageView favBtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -134,7 +134,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     }
 
     // like click
-    private void likeClick (MovieItem movieItem, Button favBtn, final TextView textLike) {
+    private void likeClick (MovieItem movieItem, ImageView favBtn, final TextView textLike) {
         DatabaseReference refLike = FirebaseDatabase.getInstance().getReference().child("likes");
         final DatabaseReference upvotesRefLike = refLike.child(movieItem.getKey_id());
 
