@@ -4,6 +4,8 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
+import android.view.View;
+import android.widget.Toast;
 
 public class MusicService extends Service {
     MediaPlayer mediaplayer;
@@ -37,6 +39,5 @@ public class MusicService extends Service {
     public void onDestroy() {
         mediaplayer.stop();
     }
-
 
 }

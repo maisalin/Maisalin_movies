@@ -5,8 +5,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,6 +19,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity2 extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,21 @@ public class MainActivity2 extends AppCompatActivity {
             case R.id.exit:
                 closeApplication();
                 break;
+            case R.id.stopStartMusic:
+                AudioManager manager = (AudioManager)this.getSystemService(Context.AUDIO_SERVICE);
+                if(manager.isMusicActive())
+                {
+                    //stopping the music
+                    Intent i = new Intent(this, MusicService.class);
+                    stopService(i);
+                }else{
+                    //starting background music
+                    Intent i = new Intent(this, MusicService.class);
+                    startService(i);
+                }
+
+                break;
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -82,5 +102,6 @@ public class MainActivity2 extends AppCompatActivity {
                     return true;
                 }
             };
+
 }
 
