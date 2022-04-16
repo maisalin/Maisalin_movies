@@ -31,10 +31,10 @@ public class FavoritesFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         movieItems.add(new MovieItem(R.drawable.bridgerton, "bridgerton","0","0"));
-        movieItems.add(new MovieItem(R.drawable.movie1, "idk","0","0"));
-        movieItems.add(new MovieItem(R.drawable.lucifer, "idk","0","0"));
-        movieItems.add(new MovieItem(R.drawable.movie3, "","0","0"));
-        movieItems.add(new MovieItem(R.drawable.movie4, "idk10","0","0"));
+        movieItems.add(new MovieItem(R.drawable.movie1, "idk","100","0"));
+        movieItems.add(new MovieItem(R.drawable.lucifer, "idk","2","0"));
+        movieItems.add(new MovieItem(R.drawable.movie3, "","1","0"));
+        movieItems.add(new MovieItem(R.drawable.movie4, "idk10","44","0"));
 
 
         return root;

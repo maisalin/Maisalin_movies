@@ -10,6 +10,8 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_favorite2_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_favorite_black_24.xml" value="0.17592592592592593" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_fire_24.xml" value="0.17592592592592593" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/drawable/ic_baseline_remove_red_eye_24.xml" value="0.19282051282051282" />
@@ -25,7 +27,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_login_page.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_loginpage.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_main2.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_main2.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_profile.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/activity_signup_page.xml" value="0.22" />
         <entry key="..\:/Users/User/AndroidStudioProjects/Maisalin_movies/app/src/main/res/layout/fav2.xml" value="0.17552083333333332" />

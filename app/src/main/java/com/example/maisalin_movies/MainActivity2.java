@@ -12,6 +12,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -59,10 +60,14 @@ public class MainActivity2 extends AppCompatActivity {
                     //stopping the music
                     Intent i = new Intent(this, MusicService.class);
                     stopService(i);
+                    Toast toast= Toast.makeText(this,"Music stopped",Toast.LENGTH_SHORT);
+                    toast.show();
                 }else{
                     //starting background music
                     Intent i = new Intent(this, MusicService.class);
                     startService(i);
+                    Toast toast= Toast.makeText(this,"Music started",Toast.LENGTH_SHORT);
+                    toast.show();
                 }
 
                 break;
