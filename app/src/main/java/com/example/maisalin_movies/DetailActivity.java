@@ -424,11 +424,132 @@ public class DetailActivity extends AppCompatActivity {
             videoView.setMediaController(mediaController);
             mediaController.setAnchorView(videoView);
         }
+        else if(name.equals("Bridge")) {
+            fileHandler1 = new FileHandler("BridgeA", this);
+            fileHandler1.readFile();
+            fileHandler2 = new FileHandler("Bridge", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.bridge;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("Lucifer")){
+            fileHandler1 = new FileHandler("LuciferA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("Lucifer", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.lucifer;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("TheGood")){
+            fileHandler1 = new FileHandler("TheGoodA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("TheGood", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.thegood;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("TheHundred")){
+            fileHandler1 = new FileHandler("TheHundredA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("TheHundred", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.thehun;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("Suits")){
+            fileHandler1 = new FileHandler("SuitsA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("Suits", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.suits;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("Twilight")){
+            fileHandler1 = new FileHandler("TwilightA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("Twilight", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.twilight;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("Nerve")){
+            fileHandler1 = new FileHandler("NerveA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("Nerve", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.nerve;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
+        else if(name.equals("theNote")){
+            fileHandler1 = new FileHandler("theNoteA", this);
+            fileHandler1.readFile();
+            fileHandler2=new FileHandler("theNote", this);
+            fileHandler2.readFile();
+
+            //adding a suitable video
+            VideoView videoView = findViewById(R.id.video_view);
+            String videoPath = "android.resource://" + getPackageName() + "/" + R.raw.thenotebook;
+            Uri uri = Uri.parse(videoPath);
+            videoView.setVideoURI(uri);
+            MediaController mediaController = new MediaController(this);
+            videoView.setMediaController(mediaController);
+            mediaController.setAnchorView(videoView);
+        }
         /*   else if(name.equals("")){
                     fileHandler1 = new FileHandler("", this);
                     fileHandler1.readFile();
                     fileHandler2=new FileHandler("", this);
                     fileHandler2.readFile();
+                    }
               }*/
 
     }

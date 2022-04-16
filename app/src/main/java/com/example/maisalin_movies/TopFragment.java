@@ -39,7 +39,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "Bridge");
                 startActivity(i);
             }
         });
@@ -47,7 +47,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "Lucifer");
                 startActivity(i);
             }
         });
@@ -63,7 +63,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "TheGood");
                 startActivity(i);
             }
         });
@@ -71,7 +71,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "TheHundred");
                 startActivity(i);
             }
         });
@@ -79,7 +79,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "Suits");
                 startActivity(i);
             }
         });
@@ -87,7 +87,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "Twilight");
                 startActivity(i);
             }
         });
@@ -95,7 +95,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "theNote");
                 startActivity(i);
             }
         });
@@ -111,7 +111,7 @@ public class TopFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), DetailActivity.class);
-                i.putExtra("name", "");
+                i.putExtra("name", "Nerve");
                 startActivity(i);
             }
         });
