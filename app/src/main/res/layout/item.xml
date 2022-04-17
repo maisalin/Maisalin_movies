@@ -15,26 +15,22 @@
         app:cardCornerRadius="20dp"
         android:layout_width="350dp"
         android:layout_height="250dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:id="@+id/popular1">
+        android:layout_gravity="center">
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/bridgerton"
-            android:id="@+id/imageView"
-            />
+            android:src="@drawable/bridgerton" />
         <ImageView
             android:id="@+id/favBtn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:layout_marginLeft="290dp"
-            android:background="@drawable/ic_baseline_favorite_24"/>
-
-
+            android:background="@drawable/ic_baseline_favorite_24"
+            />
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
@@ -44,11 +40,11 @@
             style="@style/TextAppearance.AppCompat.Title"
             android:layout_gravity="bottom"
             android:layout_marginStart="18dp"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="18dp"
+            android:visibility="invisible"/>
+
 
     </androidx.cardview.widget.CardView>
-
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,10 +58,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            android:textColor="#fff"
+            android:visibility="invisible"
             android:layout_marginStart="10dp"
             style="@style/TextAppearance.AppCompat.Body1"/>
 
     </LinearLayout>
+
 
 </LinearLayout>
