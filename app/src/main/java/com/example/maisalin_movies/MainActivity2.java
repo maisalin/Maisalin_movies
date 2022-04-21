@@ -76,6 +76,7 @@ public class MainActivity2 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //this function closes the application
     private void closeApplication() {
         finish();
         moveTaskToBack(true);

@@ -94,7 +94,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
         userName.setText(user.getUserName());
         email.setText(user.getEmail());
         password.setText(user.getPassword());
-        //   location.setText(user.getAdress());
     }
 
     @Override

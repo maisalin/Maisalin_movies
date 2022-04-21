@@ -4,18 +4,8 @@ public class User {
     private String email;
     private String password;
     private String userName;
-    private String image;
-    //private String adress;
     private String key;
 
-   /* public User(String userName, String email, String password, String image, String adress, String key) {
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
-        this.image = image;
-        this.adress = adress;
-        this.key = key;
-    }*/
 
     public User() {
     }
@@ -49,24 +39,6 @@ public class User {
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-
-    /*
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }*/
 
     public String getKey() {
         return key;

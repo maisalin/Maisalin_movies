@@ -20,6 +20,7 @@ public class FirstActivity extends AppCompatActivity {
     private Intent musicIntent;
     private TextView text1,text2;
     private static int Splash_timeout=5000;
+    private Animation myAnimation,myAnimation2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +42,10 @@ public class FirstActivity extends AppCompatActivity {
             }
         },Splash_timeout);
 
-        Animation myAnimation = AnimationUtils.loadAnimation(FirstActivity.this,R.anim.animation2);
+        myAnimation = AnimationUtils.loadAnimation(FirstActivity.this,R.anim.animation2);
         text1.startAnimation(myAnimation);
 
-        Animation myAnimation2 = AnimationUtils.loadAnimation(FirstActivity.this,R.anim.animation1);
+        myAnimation2 = AnimationUtils.loadAnimation(FirstActivity.this,R.anim.animation1);
         text2.startAnimation(myAnimation2);
 
 
