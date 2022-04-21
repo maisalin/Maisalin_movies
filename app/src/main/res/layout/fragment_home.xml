@@ -70,14 +70,6 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/movie4"
                         />
-                    <ImageView
-                        android:id="@+id/fav"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="290dp"
-                        android:background="@drawable/ic_baseline_favorite_24"/>
-
 
                 </androidx.cardview.widget.CardView>
 
@@ -95,15 +87,6 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/tv4" />
-                    <ImageView
-                        android:id="@+id/fav2"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="290dp"
-                        android:background="@drawable/ic_baseline_favorite_24"/>
-
-
 
 
                 </androidx.cardview.widget.CardView>
@@ -124,13 +107,6 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/movie1"
                         />
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="290dp"
-                        android:background="@drawable/ic_baseline_favorite_24"/>
-
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -147,13 +123,6 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/vamp" />
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="290dp"
-                        android:background="@drawable/ic_baseline_favorite_24"/>
-
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -170,13 +139,6 @@
                         android:adjustViewBounds="true"
                         android:scaleType="centerCrop"
                         android:src="@drawable/img_1" />
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="290dp"
-                        android:background="@drawable/ic_baseline_favorite_24"/>
-
 
                 </androidx.cardview.widget.CardView>
 
@@ -228,14 +190,6 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/movie6"
                         />
-                    <ImageView
-                        android:id="@+id/fave"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="bottom"
-                        android:layout_marginLeft="290dp"
-                        android:background="@drawable/ic_baseline_favorite_24"/>
-
 
 
                 </androidx.cardview.widget.CardView>
