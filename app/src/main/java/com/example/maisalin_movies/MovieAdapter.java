@@ -2,6 +2,7 @@ package com.example.maisalin_movies;
 
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,6 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -136,9 +139,18 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     }
 
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
+    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private FirebaseUser user = mAuth.getCurrentUser();
     // like click
     private void likeClick (MovieItem movieItem, ImageView favBtn, final TextView textLike) {
-        DatabaseReference refLike = FirebaseDatabase.getInstance().getReference().child("likes");
+
+
+     DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get reference that returns a root
+     DatabaseReference refLike = myRef.child("likes");
+
+       // DatabaseReference refLike=FirebaseDatabase.getInstance().getReference().child("likes");;
         final DatabaseReference upvotesRefLike = refLike.child(movieItem.getKey_id());
 
         if (movieItem.getFavStatus().equals("0")) {

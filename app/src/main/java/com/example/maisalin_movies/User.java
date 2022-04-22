@@ -5,6 +5,7 @@ public class User {
     private String password;
     private String userName;
     private String key;
+    //private String likes;
 
 
     public User() {
@@ -47,4 +48,14 @@ public class User {
     public void setKey(String key) {
         this.key = key;
     }
+
+
+    /*public String getLikes() {
+        return likes;
+    }
+
+    public void setLikes(String likes) {
+        this.likes = likes;
+    }*/
+
 }
