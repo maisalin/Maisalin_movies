@@ -1,5 +1,7 @@
 package com.example.maisalin_movies;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -87,7 +89,7 @@ public class FavoritesFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    MovieItem movieItem = dataSnapshot.getValue((MovieItem.class));
+                    MovieItem movieItem = dataSnapshot.getValue(MovieItem.class);
                     list.add(movieItem);
                     myAdapter.notifyDataSetChanged();
                 }
@@ -100,4 +102,5 @@ public class FavoritesFragment extends Fragment {
         });
         return root;
     }
+
 }

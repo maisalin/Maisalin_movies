@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -68,8 +69,10 @@ public class MovieAdapter extends ArrayAdapter<MovieItem> {
             favorite.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    myRef.push().setValue(item);
-                    favorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
+                  //  if()
+                        myRef.push().setValue(item);
+                        favorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
+
                 }
             });
         }

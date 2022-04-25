@@ -112,8 +112,7 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                             String key = myRef.push().getKey();
                             User u1 = new User(editTextName.getText().toString(),email,password);
                             u1.setKey(key);
-
-                            myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
+                           // myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
                             myRef.setValue(u1);
 
                             Intent i =new Intent (SignupPage.this,MainActivity2.class);

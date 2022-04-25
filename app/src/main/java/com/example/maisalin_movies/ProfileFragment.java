@@ -116,7 +116,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
 
         profilepic=rootView.findViewById(R.id.profilePic);
 
-        DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get reference that returns a root
+        DatabaseReference myRef = database.getReference("profiles/");//get reference that returns a root
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
