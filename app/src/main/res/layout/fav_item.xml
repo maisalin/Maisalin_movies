@@ -9,8 +9,7 @@
 
 <RelativeLayout
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,8 +24,7 @@
             android:id="@+id/imageItem"
             android:layout_width="50dp"
             android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            />
+            android:layout_marginStart="20dp" />
 
         <RelativeLayout
             android:layout_width="wrap_content"

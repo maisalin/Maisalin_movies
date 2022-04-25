@@ -110,10 +110,9 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
                             FirebaseUser user = mAuth.getCurrentUser();
                             DatabaseReference myRef = database.getReference("profiles/"+user.getUid());//get Refrence returns a root
                             String key = myRef.push().getKey();
-                           // String likes = myRef.push().getKey();
                             User u1 = new User(editTextName.getText().toString(),email,password);
                             u1.setKey(key);
-                            //u1.setLikes(likes);
+
                             myRef = database.getReference("profiles/"+user.getUid()+"/"+key);
                             myRef.setValue(u1);
 

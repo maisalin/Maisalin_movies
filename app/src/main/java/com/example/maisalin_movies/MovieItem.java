@@ -6,6 +6,7 @@ public class MovieItem {
     private String key_id;
     private String favStatus;
 
+
     public MovieItem() {
     }
 
@@ -47,4 +48,15 @@ public class MovieItem {
     public void setFavStatus(String favStatus) {
         this.favStatus = favStatus;
     }
+
+    @Override
+    public String toString() {
+        return "MovieItem{" +
+                "imageResource=" + imageResource +
+                ", title='" + title + '\'' +
+                ", key_id='" + key_id + '\'' +
+                ", favStatus='" + favStatus + '\'' +
+                '}';
+    }
+
 }

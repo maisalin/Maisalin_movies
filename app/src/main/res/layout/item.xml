@@ -24,7 +24,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/bridgerton" />
         <ImageView
-            android:id="@+id/favBtn"
+            android:id="@+id/favorite"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
