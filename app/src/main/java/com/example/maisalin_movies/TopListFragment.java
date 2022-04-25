@@ -1,6 +1,7 @@
 package com.example.maisalin_movies;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,6 @@ public class TopListFragment extends Fragment {
     //gets the root of the real time database in the FB console
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
 
-   // public  static int count =0;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,14 +45,12 @@ public class TopListFragment extends Fragment {
         Context context= getContext();
 
         String UID = maFirebaseAuth.getUid();
-        //Toast.makeText(context, "UID:" + UID, Toast.LENGTH_LONG).show();
+
         //build reference fo user related data in real time database suing user ID
         DatabaseReference myRef = database.getReference("top_movies/" + UID + "/top_movies");
 
         list = new ArrayList<>();
 
-
-       // if(count==0){
         list.add(new MovieItem(R.drawable.bridgerton, "bridgerton","1","0"));
         list.add(new MovieItem(R.drawable.lucifer, "lucifer","2","0"));
         list.add(new MovieItem(R.drawable.tv4 ,"money heist","3","0"));
@@ -63,11 +61,6 @@ public class TopListFragment extends Fragment {
         list.add(new MovieItem(R.drawable.thenb,"The notebook","8","0"));
         list.add(new MovieItem(R.drawable.m12,"Friends with benefits","9","0"));
         list.add(new MovieItem(R.drawable.nerve,"Nerve","10","0"));
-        //    count++;
-        //}
-
-
-
 
         /*database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.bridgerton, "bridgerton","1","0"));
         database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.lucifer, "lucifer","2","0"));
@@ -92,9 +85,59 @@ public class TopListFragment extends Fragment {
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //myRef.push().setValue(new Item(2,true,"this is my first item",R.id.imageItem));
-               // Toast.makeText(context,"Item:" + list.get(i), Toast.LENGTH_LONG).show();
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                if(position == 0){
+                    Intent intent = new Intent(getActivity(), DetailActivity.class);
+                    intent.putExtra("name", "Bridge");
+                    startActivity(intent);
+                }
+                if(position == 1){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "Lucifer");
+                    startActivity(i);
+                }
+                if(position == 2){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "LaCasa");
+                    startActivity(i);
+
+                }
+                if(position == 3){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "TheGood");
+                    startActivity(i);
+                }
+
+                if(position == 4){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "TheHundred");
+                    startActivity(i);
+                }
+                if(position == 5){Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "Suits");
+                    startActivity(i);
+                }
+                if(position == 6){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "Twilight");
+                    startActivity(i);
+                }
+
+                if(position == 7){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "theNote");
+                    startActivity(i);
+                }
+                if(position == 8){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "FriendsW");
+                    startActivity(i);
+                }
+                if(position == 9){
+                    Intent i = new Intent(getActivity(), DetailActivity.class);
+                    i.putExtra("name", "Nerve");
+                    startActivity(i);
+                }
             }
         });
         myListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {

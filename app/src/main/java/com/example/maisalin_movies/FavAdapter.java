@@ -30,7 +30,6 @@ public class FavAdapter extends ArrayAdapter<MovieItem> {
         View view = convertView;
         if(view == null)
             view = LayoutInflater.from(context).inflate(resource, parent, false);
-
         //method from the android studio, not related to Item object (the class we created).
          MovieItem movieItem = getItem(position);
 

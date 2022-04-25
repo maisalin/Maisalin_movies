@@ -123,7 +123,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()) {
                     User u = dataSnapshot.getValue(User.class);
                     //
-                    Log.i("Profile1111", "user" + u + " Id " + user.getUid() + " u" + u.getUserName() + u.getEmail() + u.getPassword());
+                    Log.i("Profile", "user" + u + " Id " + user.getUid() + " u" + u.getUserName() + u.getEmail() + u.getPassword());
                     updateUserData(new User(u.getUserName(), u.getEmail(), u.getPassword()));
                 }
             }
