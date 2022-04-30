@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class FavoritesFragment extends Fragment {
@@ -48,6 +49,8 @@ public class FavoritesFragment extends Fragment {
         //reference to the list view so it can be programmed
         myListView = root.findViewById(R.id.myListView2);
 
+        //removing null items
+        list.removeAll(Collections.singleton(null));
         //connect adapter with data
         myAdapter = new FavAdapter(getContext(), R.layout.fav_item, list);
 
@@ -81,7 +84,7 @@ public class FavoritesFragment extends Fragment {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 list.remove(i);
                 myAdapter.notifyDataSetChanged();
-                return false;
+                return true;
             }
         });
 
@@ -100,6 +103,7 @@ public class FavoritesFragment extends Fragment {
 
             }
         });
+
         return root;
     }
 

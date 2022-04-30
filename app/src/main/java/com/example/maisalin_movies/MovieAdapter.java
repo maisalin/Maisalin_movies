@@ -17,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -64,15 +65,18 @@ public class MovieAdapter extends ArrayAdapter<MovieItem> {
             ImageView imageView=view.findViewById(R.id.imageView);
             imageView.setImageResource(item.getImageResource());
 
-
             ImageView favorite = view.findViewById(R.id.favorite);
             favorite.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                  //  if()
-                        myRef.push().setValue(item);
-                        favorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
-
+                  /* if(movieItems.Items.contains(item)) {
+                       Toast.makeText(context,"Movie is already added",Toast.LENGTH_LONG).show();
+                   }else{
+                       myRef.push().setValue(item);
+                       favorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
+                   }*/
+                    myRef.push().setValue(item);
+                   favorite.setImageResource(R.drawable.ic_baseline_favorite2_24);
                 }
             });
         }

@@ -52,6 +52,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
     private FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private FirebaseUser user = mAuth.getCurrentUser();
+    private DatabaseReference myRef= database.getReference("/profiles"+ user.getUid());
 
 
     // TODO: Rename and change types of parameters
@@ -121,10 +122,13 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()) {
-                    User u = dataSnapshot.getValue(User.class);
-                    //
-                    Log.i("Profile", "user" + u + " Id " + user.getUid() + " u" + u.getUserName() + u.getEmail() + u.getPassword());
-                    updateUserData(new User(u.getUserName(), u.getEmail(), u.getPassword()));
+                   // User u = dataSnapshot.getValue(User.class);
+                   // Log.i("Profile", "user" + u + " Id " + user.getUid() + " u" + u.getUserName() + u.getEmail() + u.getPassword());
+                   // updateUserData(new User(u.getUserName(), u.getEmail(), u.getPassword()));
+                    if(user.getUid().equals(dataSnapshot.getKey())){
+                        User u= dataSnapshot.getValue(User.class);
+                        updateUserData(u);
+                    }
                 }
             }
 

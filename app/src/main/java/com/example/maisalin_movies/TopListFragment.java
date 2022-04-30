@@ -51,28 +51,30 @@ public class TopListFragment extends Fragment {
 
         list = new ArrayList<>();
 
-        list.add(new MovieItem(R.drawable.bridgerton, "bridgerton","1","0"));
-        list.add(new MovieItem(R.drawable.lucifer, "lucifer","2","0"));
-        list.add(new MovieItem(R.drawable.tv4 ,"money heist","3","0"));
-        list.add(new MovieItem(R.drawable.thegood,"The good doctor","4","0"));
-        list.add(new MovieItem(R.drawable.the100,"the 100","5","0"));
-        list.add(new MovieItem(R.drawable.suits,"Suits","6","0"));
-        list.add(new MovieItem(R.drawable.twi,"Twilight","7","0"));
-        list.add(new MovieItem(R.drawable.thenb,"The notebook","8","0"));
-        list.add(new MovieItem(R.drawable.m12,"Friends with benefits","9","0"));
-        list.add(new MovieItem(R.drawable.nerve,"Nerve","10","0"));
+        list.add(new MovieItem(R.drawable.bridgerton, "bridgerton","1"));
+        list.add(new MovieItem(R.drawable.lucifer, "lucifer","2"));
+        list.add(new MovieItem(R.drawable.tv4 ,"money heist","3"));
+        list.add(new MovieItem(R.drawable.thegood,"The good doctor","4"));
+        list.add(new MovieItem(R.drawable.the100,"the 100","5"));
+        list.add(new MovieItem(R.drawable.suits,"Suits","6"));
+        list.add(new MovieItem(R.drawable.twi,"Twilight","7"));
+        list.add(new MovieItem(R.drawable.thenb,"The notebook","8"));
+        list.add(new MovieItem(R.drawable.m12,"Friends with benefits","9"));
+        list.add(new MovieItem(R.drawable.nerve,"Nerve","10"));
 
-        /*database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.bridgerton, "bridgerton","1","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.lucifer, "lucifer","2","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.tv4 ,"money heist","3","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.thegood,"The good doctor","4","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.the100,"the 100","5","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.suits,"Suits","6","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.twi,"Twilight","7","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.thenb,"The notebook","8","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.m12,"Friends with benefits","9","0"));
-        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.nerve,"Nerve","10","0"));
-*/
+        /*database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.bridgerton, "bridgerton","1"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.lucifer, "lucifer","2"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.tv4 ,"money heist","3"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.thegood,"The good doctor","4"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.the100,"the 100","5"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.suits,"Suits","6"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.twi,"Twilight","7"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.thenb,"The notebook","8"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.m12,"Friends with benefits","9"));
+        database.getReference("top_movies/" + UID + "/top_movies").push().setValue(new MovieItem(R.drawable.nerve,"Nerve","10"));
+        */
+
+
         //reference to the list view so it can be programmed
         myListView = v.findViewById(R.id.myListView);
 
@@ -140,23 +142,13 @@ public class TopListFragment extends Fragment {
                 }
             }
         });
-        myListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                list.remove(i);
-                myAdapter.notifyDataSetChanged();
-                return false;
-            }
-        });
-
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    MovieItem item1 = dataSnapshot.getValue((MovieItem.class));
-                    list.add(item1);
-                    myAdapter.notifyDataSetChanged();
+                        MovieItem item1 = dataSnapshot.getValue(MovieItem.class);
+                        list.add(item1);
+                        myAdapter.notifyDataSetChanged();
                 }
             }
 

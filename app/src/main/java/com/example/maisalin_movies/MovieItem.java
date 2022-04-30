@@ -4,17 +4,15 @@ public class MovieItem {
     private int imageResource;
     private String title;
     private String key_id;
-    private String favStatus;
 
 
     public MovieItem() {
     }
 
-    public MovieItem(int imageResourse, String title, String key_id, String favStatus) {
+    public MovieItem(int imageResourse, String title, String key_id) {
         this.imageResource = imageResourse;
         this.title = title;
         this.key_id = key_id;
-        this.favStatus = favStatus;
     }
 
     public int getImageResource() {
@@ -41,22 +39,12 @@ public class MovieItem {
         this.key_id = key_id;
     }
 
-    public String getFavStatus() {
-        return favStatus;
-    }
-
-    public void setFavStatus(String favStatus) {
-        this.favStatus = favStatus;
-    }
-
     @Override
     public String toString() {
         return "MovieItem{" +
                 "imageResource=" + imageResource +
                 ", title='" + title + '\'' +
                 ", key_id='" + key_id + '\'' +
-                ", favStatus='" + favStatus + '\'' +
                 '}';
     }
-
 }
