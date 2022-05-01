@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -37,16 +38,16 @@ public class SignupPage extends AppCompatActivity implements View.OnClickListene
     //declaring all the components
     private EditText editTextEmail, editTextPass,editTextName;
     private Button submit;
-    private DatePickerDialog.OnDateSetListener mOnDateSetListener;
+
     private FirebaseAuth mAuth;
     boolean passwordVisible;
-    private DialogInterface dialog;
 
-    private FirebaseAuth maFirebaseAuth=FirebaseAuth.getInstance();
+
     //write a message to the dataBase
     // gets the root of the real time database in the FB console
     private FirebaseDatabase database = FirebaseDatabase.getInstance("https://maisalin-movies-default-rtdb.firebaseio.com/");
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

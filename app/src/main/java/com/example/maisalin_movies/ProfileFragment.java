@@ -133,7 +133,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener{
             }
 
             //gets reference for the design components
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // Failed to read value
