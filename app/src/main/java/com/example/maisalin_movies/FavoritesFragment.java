@@ -69,14 +69,14 @@ public class FavoritesFragment extends Fragment {
             }
         });
         //connects click listener to items in the list
-        myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //myRef.push().setValue(new Item(2,true,"this is my first item",R.id.imageItem));
                // Toast.makeText(getContext(),"Item:" + list.get(i), Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
         myListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
             @Override
